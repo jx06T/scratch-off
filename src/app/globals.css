@@ -19,3 +19,43 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.masked-text {
+  background: linear-gradient(to right, #f3a303, #d31905);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text path {
+  fill: transparent;
+  stroke: #333;
+  stroke-width: 2;
+  stroke-dasharray: 10;
+  stroke-dashoffset: 300;
+  animation: drawText 15s forwards;
+}
+
+.text span.a {
+  opacity: 0;
+  animation: 6s showText forwards;
+}
+
+.text span.b  {
+  opacity: 0;
+  animation: 8s showText forwards;
+}
+
+@keyframes showText {
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+@keyframes drawText {
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200;
+  }
+}
