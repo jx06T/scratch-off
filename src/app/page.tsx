@@ -55,7 +55,7 @@ export default function Home() {
             <h1 className=" w-full text-center"><span>向下滑動查看範例</span><GravityUiCircleChevronsDown className=" inline-block ml-2 mb-4 mt-2 " /></h1>
           </div>
         </div>
-        <div className=" h-80 -mt-20 bg-gradient-to-b from-white to-black">
+        <div className=" h-80 -mt-20 bg-w-to-b">
         </div>
         <div className="bg-black">
           <ImageCarousel></ImageCarousel>

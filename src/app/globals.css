@@ -73,3 +73,8 @@ body {
   scrollbar-width: none;
   /* 針對 Firefox */
 }
+
+.bg-w-to-b{
+  background: linear-gradient(to bottom, #fff,#f5f5f5 10%, #d0d0d0 30%, #555 75%, #000);
+}
+
