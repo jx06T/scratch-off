@@ -1,16 +1,16 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 function HomeHeader() {
     const [isHidden, setIsHidden] = useState(false);
-    let lastScrollY = 0;
+    const lastScrollY = useRef(0);
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-            setIsHidden(currentScrollY > lastScrollY && currentScrollY > 50);
-            lastScrollY = currentScrollY;
+            setIsHidden(currentScrollY > lastScrollY.current && currentScrollY > 50);
+            lastScrollY.current = currentScrollY;
         };
 
         window.addEventListener("scroll", handleScroll);
