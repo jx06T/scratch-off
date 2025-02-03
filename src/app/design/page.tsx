@@ -7,7 +7,7 @@ export default function DesignHome() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
       <main className="w-full min-h-screen mt-20 px-[4%] sm:px-[min(2rem,8%)]">
-        <div className=" fixed w-48 h-full pointer-events-none">
+        <div className=" fixed w-48 h-full pointer-events-none z-10">
           <StepsSidebar />
         </div>
         <div className=" md:ml-48 z-10">
