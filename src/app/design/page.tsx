@@ -18,17 +18,16 @@ export default function DesignHome() {
             </div>
             <div className="scroll-mt-20 min-h-96" id="layout">
               <h2>布局設定區</h2>
-              <div className="relative min-h-96 w-full overflow-hidden rounded-md" >
+              <div className="w-full rounded-md" >
                 <Image
-                  className="rounded-md "
-                  objectFit="cover"
-                  priority
+                  className="rounded-md object-contain !static "
                   layout="fill"
+                  priority
                   src={`https://picsum.photos/seed/picsum404/900/600`}
                   alt="佔位圖片"
                 />
               </div>
-              <div className="mt-10  px-4">
+              <div className="mt-8 px-4">
                 <div className=" prose">
                   <h3>標題：</h3>
                   <h3>發行者：</h3>
@@ -38,17 +37,16 @@ export default function DesignHome() {
             </div>
             <div className="scroll-mt-20 min-h-96" id="area">
               <h2>刮除區域設定區</h2>
-              <div className="relative min-h-96 w-full overflow-hidden rounded-md" >
+              <div className="w-full rounded-md" >
                 <Image
-                  className="rounded-md "
-                  objectFit="cover"
-                  priority
+                  className="rounded-md object-contain !static "
                   layout="fill"
+                  priority
                   src={`https://picsum.photos/seed/picsum44/900/600`}
                   alt="佔位圖片"
                 />
               </div>
-              <div className="flex flex-col md:flex-row items-start space-x-0 md:space-x-4 space-y-4 md:space-y-0 mt-10 px-4">
+              <div className="flex flex-col md:flex-row items-start space-x-0 md:space-x-4 space-y-4 md:space-y-0 mt-8 px-4">
                 <button className={` pointer-events-auto duration-500 transition-all  text-left block py-2 px-6 ml-0 border-red-500 border-2 rounded-full bg-red-100`}>橢圓工具</button>
                 <button className={` pointer-events-auto duration-500 transition-all  text-left block py-2 px-6 ml-0 border-red-500 border-2 rounded-full bg-red-100`}>矩形工具</button>
                 <button className={` pointer-events-auto duration-500 transition-all  text-left block py-2 px-6 ml-0 border-red-500 border-2 rounded-full bg-red-100`}>貝茲曲線工具</button>
