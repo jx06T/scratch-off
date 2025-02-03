@@ -1,5 +1,3 @@
-import { deflate } from "zlib"
-
 function FooterG() {
     return (
         <footer className=" bg-black text-white py-12">

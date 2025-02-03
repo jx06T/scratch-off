@@ -1,6 +1,6 @@
 import Image from "next/image";
 import BigTitle from "@/components/BigTitle";
-import { GravityUiCircleChevronsDown, GravityUiCircleChevronsRight, GravityUiCircleChevronsLeft } from "@/components/Icons";
+import { GravityUiCircleChevronsDown } from "@/components/Icons";
 import ImageCarousel from "@/components/ImageCarousel";
 import AnimatedButton from "@/components/AnimatedButton";
 import FooterG from "@/components/FooterG";
@@ -61,7 +61,7 @@ export default function Home() {
           <ImageCarousel></ImageCarousel>
         </div>
       </main>
-     <FooterG/>
+      <FooterG />
     </div>
   );
 }

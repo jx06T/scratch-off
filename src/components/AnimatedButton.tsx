@@ -1,7 +1,6 @@
 "use client"
 import React from 'react';
 import { motion } from "framer-motion";
-import { deflate } from 'zlib';
 import Link from 'next/link';
 
 function AnimatedButton({ text, url, cls = "" }: { text: string, url: string, cls?: string }) {
