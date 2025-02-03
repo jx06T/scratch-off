@@ -54,9 +54,12 @@ body {
   }
 }
 @keyframes drawText {
+  50%{
+    stroke-dasharray: 70;
+  }
   100% {
     stroke-dashoffset: 0;
-    stroke-dasharray: 200;
+    stroke-dasharray: 350;
   }
 }
 
