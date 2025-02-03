@@ -1,11 +1,18 @@
 import Image from "next/image";
-import BigTitle from "../components/BigTitle";
-import { GravityUiCircleChevronsDown } from "@/components/Icons";
+import BigTitle from "@/components/BigTitle";
+import { GravityUiCircleChevronsDown, GravityUiCircleChevronsRight, GravityUiCircleChevronsLeft } from "@/components/Icons";
+import ImageCarousel from "@/components/ImageCarousel";
+import AnimatedButton from "@/components/AnimatedButton";
+import FooterG from "@/components/FooterG";
+
 export default function Home() {
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
       <main className="w-full">
         <div className=" relative w-full h-screen overflow-hidden">
+          <div className=" absolute w-full bottom-20 flex justify-center">
+            <AnimatedButton cls=" mt-10" url="/design" text="開始製作！"></AnimatedButton>
+          </div>
           <Image src={"/home_bg.jpg"} alt="Homepage background -- scratch off" layout="fill" objectFit="cover" priority></Image>
           <div className=" top-0 left-0 w-full h-full flex justify-center items-center">
             <div className=" flex flex-col space-y-4 text text-5xl sm:text-6xl md:text-6xl text-center px-6 sm:px-10 md:px-24 py-10 font-extrabold w-full h-fit bg-white/30 backdrop-blur-sm shadow-lg">
@@ -28,7 +35,7 @@ export default function Home() {
               <li>QR code 兌獎確認</li>
               <li>開發者 api 接口</li>
             </ul>
-            <h1>設計</h1>
+            <h1>設計步驟</h1>
             <ol>
               <li>上傳自訂圖片</li>
               <li>設定標題等布局</li>
@@ -44,24 +51,17 @@ export default function Home() {
               <li>哈希產生模式：依照規則輸入指定字串（例如：生日、姓名等）後依據輸入內容產生刮刮樂</li>
             </ul>
           </div>
-          <div className="text-4xl mt-16">
-            <h1 className=" w-full text-center"><span>向下滑動前往製作</span><GravityUiCircleChevronsDown className=" inline-block ml-2 mb-2 mt-2 sm:mt-0" /></h1>
+          <div className="text-3xl mt-20">
+            <h1 className=" w-full text-center"><span>向下滑動查看範例</span><GravityUiCircleChevronsDown className=" inline-block ml-2 mb-4 mt-2 " /></h1>
           </div>
         </div>
-        <div className=" h-screen mt-3 bg-gradient-to-b from-white to-black"></div>
-      </main>
-      <footer className=" bg-black text-white">
-        <div className="container mx-auto text-left text-lg pb-6 px-6">
-          <p>&copy; {new Date().getFullYear()} scratch-off . All rights reserved.</p>
-          <nav>
-            <ul className="text-base ">
-              <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
-              <li><a href="/" className="hover:underline">Home</a></li>
-              <li><a href="/contact" className="hover:underline">Contact Us</a></li>
-            </ul>
-          </nav>
+        <div className=" h-80 -mt-20 bg-gradient-to-b from-white to-black">
         </div>
-      </footer>
+        <div className="bg-black">
+          <ImageCarousel></ImageCarousel>
+        </div>
+      </main>
+     <FooterG/>
     </div>
   );
 }
