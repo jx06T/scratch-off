@@ -4,7 +4,7 @@ import FooterG from "@/components/FooterG";
 
 export default function DesignHome() {
   const params = useParams(); // 取得動態參數
-  const userId = params.id; // `id` 對應 URL 的參數
+  const userId = params ? params.id : ""; // `id` 對應 URL 的參數
 
   return (
     <div className="font-[family-name:var(--font-geist-sans)]">
@@ -19,7 +19,7 @@ export default function DesignHome() {
           </ul>
         </div>
       </main>
-     <FooterG/>
+      <FooterG />
     </div>
   );
 }
